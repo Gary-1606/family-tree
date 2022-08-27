@@ -1,7 +1,7 @@
 {
   "name": "family-tree",
   "version": "1.0.0",
-  "description": "",
+  "description": "Family tree relationship traversal",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Gary-1606/family-tree#readme",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
@@ -38,7 +39,8 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
   },
   "browserslist": [
     "last 2 versions"
