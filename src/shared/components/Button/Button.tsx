@@ -32,5 +32,8 @@ const S = {
     border: 0;
     border-radius: ${Spacing.u1};
     min-width: 120px;
+    &:hover {
+      cursor: pointer;
+    }
   `,
 };

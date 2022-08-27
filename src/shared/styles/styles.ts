@@ -1,12 +1,3 @@
-/* Breakpoints */
-export type GridBreakpoint = "xs" | "sm" | "md" | "lg";
-export const Breakpoints = {
-  xs: 480,
-  sm: 767,
-  md: 992,
-  lg: 1200,
-};
-
 /* Font Sizes */
 const textSizing = [30, 20, 16, 14, 12];
 export const FontSize = {
@@ -53,4 +44,13 @@ export const FontWeight = {
   normal: 500,
   /** For use in most general text places - inputs and paragraphs */
   light: 300,
+};
+
+/* Breakpoints */
+export type GridBreakpoint = keyof typeof Breakpoints;
+export const Breakpoints = {
+  xs: 480,
+  sm: 767,
+  md: 992,
+  lg: 1200,
 };
