@@ -40,8 +40,8 @@ export const familyNodes: FamilyNode[] = [
   {
     id: 5,
     partnerId: 4,
-    motherId: 2,
-    fatherId: 1,
+    motherId: null,
+    fatherId: null,
     gender: "female",
     name: "Ambi",
     generation: 2,
@@ -58,8 +58,8 @@ export const familyNodes: FamilyNode[] = [
   {
     id: 7,
     partnerId: 6,
-    motherId: 2,
-    fatherId: 1,
+    motherId: null,
+    fatherId: null,
     gender: "female",
     name: "Lika",
     generation: 2,
@@ -76,8 +76,8 @@ export const familyNodes: FamilyNode[] = [
   {
     id: 9,
     partnerId: 8,
-    motherId: 2,
-    fatherId: 1,
+    motherId: null,
+    fatherId: null,
     gender: "male",
     name: "Vyan",
     generation: 2,

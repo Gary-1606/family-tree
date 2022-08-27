@@ -5,7 +5,7 @@ import { Colors } from "@shared/styles/colors";
 
 interface Props {
   buttonText: string;
-  onBtnClick: () => void;
+  onBtnClick: (e: any) => void;
   isDisabled?: boolean;
 }
 
@@ -15,7 +15,7 @@ export const Button: React.FC<Props> = ({
   onBtnClick,
 }) => {
   return (
-    <S.Button disabled={isDisabled} onClick={() => onBtnClick()}>
+    <S.Button disabled={isDisabled} onClick={(e) => onBtnClick(e)}>
       {buttonText}
     </S.Button>
   );

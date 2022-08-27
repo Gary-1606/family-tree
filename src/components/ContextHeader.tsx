@@ -18,7 +18,7 @@ export const ContextHeader: FunctionComponent = () => {
         Input: Person = Kriya <br /> Input: Relative = Saayan <br />
         Expected Output: Paternal Uncle
       </StyledTypography.Bold>
-      <img width={900} src={familytree} alt="family-tree" />
+      <img width={1100} src={familytree} alt="family-tree" />
     </>
   );
 };
