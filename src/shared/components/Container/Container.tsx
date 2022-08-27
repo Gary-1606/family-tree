@@ -19,6 +19,5 @@ const S = {
     width: 100%;
     margin: ${Spacing.u4} 0;
     padding: ${({ padding }) => padding};
-    text-align: center;
   `,
 };

@@ -1,14 +1,16 @@
 import { render } from "react-dom";
-import { StrictMode } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import { FunctionComponent, StrictMode } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Result from "./pages/Result";
 
-const App = () => {
+const App: FunctionComponent = () => {
   return (
     <StrictMode>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
       </BrowserRouter>
     </StrictMode>

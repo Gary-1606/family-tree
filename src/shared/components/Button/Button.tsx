@@ -25,15 +25,16 @@ const S = {
   Button: styled.button<{ disabled: boolean }>`
     padding: ${Spacing.u3};
     background-color: ${Colors.blue.base};
-    opacity: ${({ disabled }) => (disabled ? 0.7 : 1)};
+    opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
     color: ${Colors.white.base};
-    margin-left: ${Spacing.u5};
     outline: none;
     border: 0;
     border-radius: ${Spacing.u1};
     min-width: 120px;
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      opacity: 0.8;
     }
   `,
 };
