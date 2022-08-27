@@ -1,9 +1,18 @@
-import ErrorBoundary from "../../components/ErrorBoundary";
+import { FunctionComponent } from "react";
+import ErrorBoundary from "@shared/components/ErrorBoundary";
+import Container from "@shared/components/Container";
+import Button from "@shared/components/Button";
 
-export const Home = () => {
+export const Home: FunctionComponent = () => {
+  const onBtnClick = () => {
+    console.log("working...");
+  };
+
   return (
     <ErrorBoundary>
-      <div>Check</div>
+      <Container>
+        <Button buttonText="Trial" onBtnClick={onBtnClick} />
+      </Container>
     </ErrorBoundary>
   );
 };
