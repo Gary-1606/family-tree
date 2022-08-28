@@ -27,6 +27,6 @@ export const Colors = {
     base: '#000',
   },
   green: {
-    base: '#7ea787',
+    base: '#15ad36',
   },
 };

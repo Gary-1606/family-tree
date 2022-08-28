@@ -3,6 +3,9 @@ import React, { FunctionComponent, useState } from 'react';
 import ContextHeader from '../components/ContextHeader';
 import { familyNodes as data } from '@shared/assets/data';
 import { FamilyNode } from '@shared/interface/data.interface';
+import styled from 'styled-components';
+import { FontWeight, Spacing } from '@shared/styles/styles';
+import { Colors } from '@shared/styles/colors';
 
 export const Result: FunctionComponent = () => {
   const [person, setPerson] = useState<string>('');
@@ -17,7 +20,7 @@ export const Result: FunctionComponent = () => {
     // Filtering based on input names
     const validNames = [
       person.toLowerCase().trim(),
-      relative.trim().toLowerCase().trim(),
+      relative.toLowerCase().trim(),
     ];
     const persons = data.filter((datum) => {
       return validNames.includes(datum.name.toLowerCase().trim());
@@ -36,7 +39,6 @@ export const Result: FunctionComponent = () => {
     }
     setIsInputValid(true);
     getRelationship(persons);
-    e.preventDefault();
   };
 
   const getRelationship = (persons: FamilyNode[]) => {
@@ -213,7 +215,7 @@ export const Result: FunctionComponent = () => {
       <ContextHeader />
       <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="input-1">Person:</label>
-        <input
+        <S.Input
           placeholder="Enter person name"
           name="person"
           type="text"
@@ -224,7 +226,7 @@ export const Result: FunctionComponent = () => {
         />
         <br />
         <label htmlFor="input-2">Relative:</label>
-        <input
+        <S.Input
           placeholder="Enter relative name"
           name="relative"
           type="text"
@@ -234,12 +236,28 @@ export const Result: FunctionComponent = () => {
           onChange={(e) => setRelative(e.target.value)}
         />
         <br />
-        {!isInputValid && <div>{errorMsg}</div>}
-        {relationship && isInputValid && <div>{relationship}</div>}
+        {!isInputValid && <S.Info isSuccess={false}>{errorMsg}</S.Info>}
+        {relationship && isInputValid && (
+          <S.Info isSuccess={true}>{relationship}</S.Info>
+        )}
         <Button buttonText="Find Result" onBtnClick={(e) => handleSubmit(e)} />
       </form>
     </>
   );
+};
+
+const S = {
+  Input: styled.input`
+    padding: ${Spacing.u2};
+    margin-bottom: ${Spacing.u2};
+    margin-left: ${Spacing.u1};
+  `,
+  Info: styled.div<{ isSuccess: boolean }>`
+    color: ${({ isSuccess }) =>
+      isSuccess ? `${Colors.green.base}` : `${Colors.red.base}`};
+    font-weight: ${FontWeight.normal};
+    margin-bottom: ${Spacing.u2};
+  `,
 };
 
 export default Result;
