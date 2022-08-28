@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Spacing } from "@shared/styles/styles";
-import { Colors } from "@shared/styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { Spacing } from '@shared/styles/styles';
+import { Colors } from '@shared/styles/colors';
 
 interface Props {
   buttonText: string;

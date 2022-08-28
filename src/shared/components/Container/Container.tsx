@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import { Spacing } from "@shared/styles/styles";
+import styled from 'styled-components';
+import { Spacing } from '@shared/styles/styles';
 
 interface Props {
   padding?: string;
 }
 
-export const Container: React.FC<Props> = ({ padding = "60px", children }) => (
+export const Container: React.FC<Props> = ({ padding = '60px', children }) => (
   <S.Container>
     <S.Centered padding={padding}>{children}</S.Centered>
   </S.Container>

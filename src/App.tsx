@@ -1,9 +1,9 @@
-import { render } from "react-dom";
-import { FunctionComponent, StrictMode, lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { render } from 'react-dom';
+import { FunctionComponent, StrictMode, lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
-const Result = lazy(() => import("./pages/Result"));
+const Result = lazy(() => import('./pages/Result'));
 
 const App: FunctionComponent = () => {
   return (
@@ -20,4 +20,4 @@ const App: FunctionComponent = () => {
   );
 };
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById('root'));

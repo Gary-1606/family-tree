@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { FontSize, FontWeight } from "@shared/styles/styles";
+import styled from 'styled-components';
+import { FontSize, FontWeight } from '@shared/styles/styles';
 
 export const StyledTypography = {
   H1: styled.div`

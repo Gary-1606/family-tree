@@ -1,11 +1,11 @@
-import { FunctionComponent } from "react";
-import ErrorBoundary from "@shared/components/ErrorBoundary";
-import Container from "@shared/components/Container";
-import styled from "styled-components";
-import { Spacing } from "@shared/styles/styles";
-import { Link } from "react-router-dom";
-import { Colors } from "@shared/styles/colors";
-import { StyledTypography } from "@shared/styles/typography";
+import { FunctionComponent } from 'react';
+import ErrorBoundary from '@shared/components/ErrorBoundary';
+import Container from '@shared/components/Container';
+import styled from 'styled-components';
+import { Spacing } from '@shared/styles/styles';
+import { Link } from 'react-router-dom';
+import { Colors } from '@shared/styles/colors';
+import { StyledTypography } from '@shared/styles/typography';
 
 export const Home: FunctionComponent = () => {
   return (

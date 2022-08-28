@@ -1,8 +1,8 @@
-import Button from "@shared/components/Button";
-import { fireEvent, render, screen } from "@testing-library/react";
+import Button from '@shared/components/Button';
+import { fireEvent, render, screen } from '@testing-library/react';
 
-describe("Button", () => {
-  it("should call onclick prop when clicked", () => {}),
+describe('Button', () => {
+  it('should call onclick prop when clicked', () => {}),
     async () => {
       const handleClick = jest.fn();
       render(<Button onBtnClick={handleClick} buttonText="Find Result" />);
