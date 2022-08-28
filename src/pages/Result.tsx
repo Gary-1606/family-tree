@@ -4,7 +4,7 @@ import ContextHeader from "../components/ContextHeader";
 import { familyNodes as data } from "@shared/assets/data";
 import { FamilyNode } from "@shared/interface/data.interface";
 
-export const Result: FunctionComponent = () => {
+export const Result = () => {
   const [person, setPerson] = useState<string>("");
   const [relative, setRelative] = useState<string>("");
   const [isInputValid, setIsInputValid] = useState<boolean>(true);
@@ -217,6 +217,7 @@ export const Result: FunctionComponent = () => {
           placeholder="Enter person name"
           name="person"
           type="text"
+          data-testid="person-name"
           value={person}
           onChange={(e) => setPerson(e.target.value)}
         />
@@ -226,6 +227,7 @@ export const Result: FunctionComponent = () => {
           placeholder="Enter relative name"
           name="relative"
           type="text"
+          data-testid="relative-name"
           value={relative}
           onChange={(e) => setRelative(e.target.value)}
         />
