@@ -14,8 +14,6 @@ const config: Config.InitialOptions = {
     "^@shared/(.*)$": "<rootDir>/src/shared/$1",
     "^@pages/(.*)$": "<rootDir>/src/pages/$1",
   },
-  // Add more setup options before each test is run
-  // setupFilesAfterEnv: ["<rootDir>/src/test/jest.setup.ts"],
   testPathIgnorePatterns: ["<rootDir>/node_modules/"],
   transformIgnorePatterns: ["/node_modules/(?!(jose))"],
   testEnvironment: "jest-environment-jsdom",
