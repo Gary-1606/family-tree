@@ -76,8 +76,7 @@ npm run test:watch (for watch mode)
 You should see the project is structured as follows:
 
 ```
-    family-tree
-    └── src
+        src
         ├── __mocks__
         ├── components
         ├── pages
