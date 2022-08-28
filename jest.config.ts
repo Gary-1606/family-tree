@@ -8,7 +8,7 @@ const config: Config.InitialOptions = {
   ],
   moduleNameMapper: {
     "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$":
-      "jest-transform-stub",
+      "<rootDir>/src/__mocks__/fileMock.js",
 
     // Handle module aliases
     "^@shared/(.*)$": "<rootDir>/src/shared/$1",
